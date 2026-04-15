@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echoes of the Old Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" width="800" height="600"></canvas>
+
+        <!-- Main Menu UI -->
+        <div id="main-menu" class="ui-screen active">
+            <h1>Echoes of the Old Growth</h1>
+            <p>Select your Wielder</p>
+            <div id="character-select">
+                <button class="char-btn" data-char="Lyra">
+                    <h3>Lyra</h3>
+                    <p>Attuned Ear</p>
+                </button>
+                <button class="char-btn" data-char="Bram">
+                    <h3>Bram</h3>
+                    <p>Thorned Aura</p>
+                </button>
+                <button class="char-btn" data-char="Sera">
+                    <h3>Sera</h3>
+                    <p>Fleet Footed</p>
+                </button>
+                <button class="char-btn" data-char="Oren">
+                    <h3>Oren</h3>
+                    <p>Masterwork</p>
+                </button>
+            </div>
+
+            <p>Select your Instrument</p>
+            <div id="instrument-select">
+                <button class="inst-btn" data-inst="Lute">
+                    <h3>Hollow Lute</h3>
+                    <p>Cone Attack</p>
+                </button>
+                <button class="inst-btn" data-inst="Drum">
+                    <h3>Root Drum</h3>
+                    <p>Aura Pulse</p>
+                </button>
+                <button class="inst-btn" data-inst="Flute">
+                    <h3>Silver Flute</h3>
+                    <p>Piercing Shot</p>
+                </button>
+            </div>
+
+            <button id="start-btn" disabled>Start Expedition</button>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud" class="ui-screen hidden">
+            <div class="top-bar">
+                <div class="health-bar-container">
+                    <div id="health-bar"></div>
+                </div>
+                <div id="timer">00:00</div>
+            </div>
+            <div class="xp-bar-container">
+                <div id="xp-bar"></div>
+                <div id="level-display">Lv 1</div>
+            </div>
+        </div>
+
+        <!-- Level Up UI -->
+        <div id="level-up-screen" class="ui-screen hidden">
+            <h2>Harmonize</h2>
+            <p>Select a Riff</p>
+            <div id="upgrade-options">
+                <!-- Upgrades will be injected here -->
+            </div>
+        </div>
+
+        <!-- Game Over UI -->
+        <div id="game-over-screen" class="ui-screen hidden">
+            <h2 id="game-over-title">The Melody Fades</h2>
+            <p id="game-over-stats"></p>
+            <button id="restart-btn">Return to Hearthfire Glade</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/engine.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/weapons.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/collectible.js"></script>
+    <script src="js/upgrades.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
