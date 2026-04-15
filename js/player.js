@@ -120,10 +120,10 @@ class Player {
         ctx.arc(0, 0, this.radius - 2, 0, Math.PI * 2);
         ctx.stroke();
 
-        // Draw charms
-        this.charms.forEach(charm => charm.draw(ctx));
-
         ctx.restore();
+
+        // Draw charms outside of player translation
+        this.charms.forEach(charm => charm.draw(ctx));
     }
 
     takeDamage(amount) {
